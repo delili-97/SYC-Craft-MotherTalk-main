@@ -1,0 +1,164 @@
+/* House style — main #8B5E34 ground #FDF6EC ink #2B2118 accent #E9A23B headings: Georgia, serif body: system-ui, sans-serif */
+
+/* Member 1 shared blocks: house style, layout, phone */
+* { box-sizing: border-box; }
+body { margin: 0;
+   background: beige;
+    color: #2B2118;
+     font-family: system-ui, -apple-system, Arial, sans-serif;
+      line-height: 1.6;
+       display: grid;
+        grid-template-areas: "header header" "main aside" "footer footer";
+         grid-template-columns: minmax(0, 1fr) 18rem; 
+}
+h1, h2, h3 { font-family: Georgia, serif;
+   color: brown; }
+a { 
+  color: #8B5E34;
+ }
+header { 
+  grid-area: header;
+   background: chocolate;
+    color:black;
+     padding: 1rem 1.5rem; 
+    }
+header h1, header p { 
+  color: black;
+   margin: 0.25rem 0; 
+  }
+nav ul { 
+  list-style: none;
+   margin: 1rem 0 0;
+    padding: 0;
+     display: flex; 
+     flex-wrap: wrap; 
+     gap: 0.5rem 1.25rem; 
+    }
+nav a { 
+  color: black;
+   text-decoration: none; 
+   font-weight: 600; 
+  }
+nav a:hover, nav a:focus { 
+  text-decoration: underline;
+ }
+main { 
+  grid-area: main;
+   padding: 1.5rem;
+    min-width: 0;
+   }
+aside { 
+  grid-area: aside;
+   background: #ffffff;
+    border-left: 4px solid #E9A23B;
+     padding: 1.25rem;
+     }
+footer { 
+  grid-area: footer;
+   background: chocolate;
+    color: #FDF6EC;
+     padding: 1rem 1.5rem;
+      text-align: center;
+     }
+img, input, select, textarea { 
+  max-width: 100%;
+ }
+input, select, textarea { width: 100%;
+   padding: 0.6rem;
+    border: 1px solid #2B2118;
+     border-radius: 6px;
+      background: #ffffff;
+     }
+button { 
+  background:chocolate;
+   color:black;
+    border: none;
+     padding: 0.7rem 1.25rem;
+      border-radius: 6px; 
+      font-size: 1rem;
+       cursor: pointer; 
+      }
+button:hover, button:focus { 
+  background: #E9A23B;
+   color: black;
+   }
+
+.table-scroll { 
+  overflow-x: auto;
+ }
+table { 
+  border-collapse: collapse;
+   width: 100%;
+   }
+th, td { 
+  border: 1px solid #2B2118;
+   padding: 0.6rem; text-align: left;
+   }
+th { 
+  background: #8B5E34;
+   color: #ffffff; 
+  }
+
+/* Andrew block: index, stories, contact */
+.card-row { 
+  display: flex; 
+  flex-wrap: wrap;
+   gap: 1rem;
+   }
+.card { background: #ffffff; 
+  border: 1px solid #8B5E34;
+   border-radius: 8px;
+    padding: 1rem;
+     flex: 1 1 16rem;
+    }
+.card h3 { 
+  margin-top: 0;
+ }
+.badge { 
+  display: inline-block;
+   background: #E9A23B;
+    color: #2B2118;
+     padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+       font-weight: 700;
+       }
+
+/* Anita block: about, learn, colouring, progress */
+form { 
+  background: #ffffff;
+   border: 1px solid #8B5E34;
+    border-radius: 8px; 
+    padding: 1.25rem; 
+  }
+fieldset { 
+  border: 1px solid #8B5E34;
+   border-radius: 6px;
+    margin-bottom: 1rem; 
+    padding: 1rem; 
+  }
+legend { 
+  font-weight: 700;
+   color: #8B5E34;
+   }
+label {
+   display: block;
+    font-weight: 600;
+     margin: 0.75rem 0 0.25rem;
+     }
+.steps li { 
+  margin-bottom: 0.75rem;
+ }
+
+/* Anderson shared block: phone, last in the file */
+@media (max-width: 700px) {
+  body { 
+    grid-template-areas: "header" "main" "aside" "footer"; 
+    grid-template-columns: 1fr;
+   }
+  main, aside { 
+    padding: 1rem;
+   }
+  nav ul { 
+    flex-direction: column;
+   }
+}
